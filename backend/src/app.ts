@@ -56,6 +56,6 @@ app.use(errorHandler);
 // Test Prisma connection (optional)
 prisma.$connect()
   .then(() => console.log('Connected to PostgreSQL via Prisma'))
-  .catch((err) => console.error('Failed to connect to PostgreSQL:', err));
+  .catch((error: any) => console.error('Failed to connect to PostgreSQL:', error));
 
 export default app;
